@@ -36,7 +36,7 @@ int main(){
     // Create particle filter
     ParticleFilter pf;
     vector<ground_truth> result_best_particle;
-    for (int i = 0; i < 10; i++){
+    for (int i = 0; i < 900; i++){
         if (!pf.initialized()) {
             // Sense noisy position data from the simulator
             double sense_x = std::stod("6.2785");
