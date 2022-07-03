@@ -34,10 +34,11 @@ for line in map_file.readlines():
     map_x = np.append(map_x, float(data[0]))
     map_y = np.append(map_y, float(data[1]))
 
+plt.figure(figsize=(12, 8))
+plt.plot(result_x, result_y, 'o', label='best particles')
+plt.plot(gt_x, gt_y, '-', label='ground truth')
+plt.plot(map_x, map_y, 'o', label='landmarks')
 
-plt.figure(figsize=(12,8))
-plt.plot(result_x, result_y,'o')
-plt.plot(gt_x, gt_y,'-')
-plt.plot(map_x, map_y,'o')
+
+plt.legend()
 plt.show()
-
