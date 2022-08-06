@@ -151,6 +151,7 @@ void ParticleFilter::updateWeights(double sensor_range, const double *std_landma
 
         weights.push_back(particles[i].weight);
     }
+    weights = normalize_vector(weights);
 }
 
 void ParticleFilter::resample() {

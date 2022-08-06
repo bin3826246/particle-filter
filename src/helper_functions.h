@@ -275,13 +275,13 @@ static float normpdf(float x, float mu, float std) {
 }
 
 //static function to normalize a vector:
-static std::vector<float> normalize_vector(std::vector<float> inputVector){
+static std::vector<double> normalize_vector(std::vector<double> inputVector){
 
     //declare sum:
-    float sum = 0.0f;
+    double sum = 0.0;
 
     //declare and resize output vector:
-    std::vector<float> outputVector ;
+    std::vector<double> outputVector ;
     outputVector.resize(inputVector.size());
 
     //estimate the sum:
