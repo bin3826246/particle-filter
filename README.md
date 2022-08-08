@@ -8,10 +8,31 @@ run `src/main.cpp` - calculate the best particle location
 run `draw.py` - draw the particle trajectory diagrams
 
 # Input Data
-- data/control_data.txt : the velocity and yaw rate of the sensor.
-- data/gt_data.txt : the ground truth data of XY coordinates and yaw of the vehicle.
-- data/map_data.txt : the data of XY coordinates of landmarks.
-- data/observation : observation data of sensor at each time step.
+```
+control_data.txt : 
+v  yaw
+
+where:
+(v  yaw) - the velocity and yaw rate of the sensor.
+
+gt_data.txt : 
+x y theta
+
+where:
+(x y theta) - the ground truth data of XY coordinates and yaw of the vehicle.
+
+map_data.txt : 
+landmark_x landmark_y id
+
+where:
+(landmark_x landmark_y id) - the data of XY coordinates and id of landmarks.
+
+observation_*.txt : 
+local_x, local_y
+
+where:
+(local_x, local_y) - observation data of sensor at each time step.
+```
 # Result
 ![pipeline](./pic/Figure_1.png)
 # References

@@ -188,7 +188,7 @@ inline bool read_gt_data(std::string filename, std::vector<ground_truth>& gt) {
         double x, y, azimuth;
 
         // Declare single ground truth
-        ground_truth single_gt;
+        ground_truth single_gt{};
 
         //read data from line to values
         iss_pos >> x;
